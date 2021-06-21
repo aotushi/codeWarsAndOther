@@ -16,6 +16,7 @@ solution('abcdef') // should return ['ab', 'cd', 'ef']
 ### Solution
 
 ```js
+//my
 function solution(str) {
   let arr = [];
   if(str.length === 0) {
@@ -37,6 +38,24 @@ function solution(str) {
 ```
 
 
+
+```js
+//recommended
+
+function solution(str) {
+  let i = 0;
+  let arr = new Array();
+  if (str.length % 2 !== 0) {
+    str = str + '_';
+  }
+  
+  while (i<str.length) {
+    result.push(str[i] + str[i+1]);
+    i+=2;
+  }
+  return result;
+}
+```
 
 
 
