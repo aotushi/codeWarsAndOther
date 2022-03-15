@@ -7,5 +7,9 @@
  */
 
 const alphanumeric = str => {
-  return [...str].every(item => /[\d]/.test(item) || /[a-zA-Z]/.test(item));
+  return [...str].length !== 0 && [...str].every(item => /[\d]/.test(item) || /[a-zA-Z]/.test(item));
 }
+
+// recommend method
+
+alphanumeric = s => /^[a-z\d]+$/i.test(s);
