@@ -3,7 +3,12 @@
  * @name RegExp Password Validation
  * @link https://www.codewars.com/kata/52e1476c8147a7547a000811/train/javascript
  * @desc
- *  
+ *  write regex that will validate a password to make sure it meets the following criteria:
+ *   1.At least six characters long
+ *   2.contains a lowercase letter
+ *   3.contains an uppercase letter
+ *   4.contains a number
+ *  Valid passwords will only be alphanumeric characters.
  */
 
 const validate = psd => {
