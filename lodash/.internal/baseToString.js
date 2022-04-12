@@ -15,5 +15,15 @@ const symbolToString = Symbol.prototype.toString
  * @returns {string} Returns the string.
  */
 function baseToString(value) {
-  
+  if (typeof value === 'string') {
+    return value
+  }
+  if (Array.isArray(value)) {
+    return `${value.map(baseToString)}`
+  }
+  const result = `${value}`
+
+  return (result === '0' && (1 / value) === -INFINITY) ? '-0' : result
 }
+
+export default baseToString
